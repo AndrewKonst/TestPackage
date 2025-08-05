@@ -9,13 +9,14 @@ let package = Package(
     products: [
         .library(
             name: "CoreSdkPackage",
-            targets: ["CoreSdkPackage"]
+            targets: ["CoreSdk"]
         )
     ],
     targets: [
-        .target(
-            name: "CoreSdkPackage",
-            path: "Sources/CoreSdkPackage"
+        .binaryTarget(
+            name: "CoreSdk",
+            url: "https://github.com/AndrewKonst/TestPackage/releases/download/1.0.0/CoreSdk.xcframework.zip",
+            checksum: "e214d0656135e635a9d664fc9a89585ae37c9731e6dfa6e3f5527373afe796eb"
         )
     ]
 )
